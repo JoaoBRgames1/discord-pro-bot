@@ -1,0 +1,11 @@
+services:
+  discord-pro-bot:
+    build: .
+    container_name: discord-pro-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "19071:19071"
+    volumes:
+      - ./data:/app/data
